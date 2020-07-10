@@ -61,13 +61,10 @@ while ( (i < strlen(str_prm)) && (str_prm[i] != '\0') )
 		while (str_prm[k] != '\0')
 		 {
 			str_prm[k] = str_prm[k + 1];
-			
 			k++;
 		 }
-
 		continue;
 	 }
-
 	i++;
  }
 }
@@ -104,7 +101,6 @@ while ( (i < strlen(str_prm)) && ( (isspace(str_prm[i])) || (str_prm[i] == '\n')
 		str_prm[k] = str_prm[k + 1];
 		k++;
 	 }
-
 	i--;
  }
 }
@@ -137,7 +133,6 @@ while ( (colon_cnt != 2) && (i < strlen(str_prm)) )
 		
 			k++;
 		 }
-		
 		continue;
 	 }
 
@@ -170,7 +165,6 @@ config_file = fopen("iteration_config.txt", "r");
 if (config_file == NULL)
  {
 	printf("\"iteration_config.txt\" Cannot be Found!");
-	
 	return (0);
  }
 
@@ -183,7 +177,6 @@ log_enabled = 0;
 while (fgets(curr_line, sizeof(curr_line), config_file))
  {
 	trim_config_line(curr_line);
-
 	exist_ptr = strstr(curr_line, "Search::");
 	if (exist_ptr)
 	 {
@@ -208,7 +201,6 @@ while (fgets(curr_line, sizeof(curr_line), config_file))
 	if (exist_ptr)
 	 {
 		trim_all_spaces(curr_line);
-
 		tmp_str_index = modules_str_len;
 		for (i = 0; curr_line[i] != '\0'; i++)
 		 {
@@ -233,7 +225,6 @@ while (fgets(curr_line, sizeof(curr_line), config_file))
 		if (modules_cnt == 0) continue;
 
 		modules_to_search = malloc( (modules_cnt) * sizeof(char *));
-		
 		for (i = 0; i <= modules_cnt; i++)
 		 {
 			modules_to_search[i] = malloc(MODULE_STR_LEN * sizeof(char));
@@ -355,14 +346,10 @@ char line[1000];
 
 
 new_file = fopen(dir_path_ptr, "r");
-
 (*lines_param) = (struct file_line_s *) malloc(sizeof(struct file_line_s));
-
 fgets(line, sizeof(line), new_file);
-
 (*lines_param) -> next_line = 0;
 strcpy((*lines_param) -> line, line);
-
 past_line = (*lines_param); 
 
 while(fgets(line, sizeof(line), new_file))
@@ -483,7 +470,6 @@ unsigned char		includes_found, header_already_exist;
 if (is_dir(dir_path_str))
  {
 	curr_dir = opendir(dir_path_str);
-	
 	processed_dir_cnt++;
 
 	if (log_enabled && log_file)
@@ -522,7 +508,6 @@ while ((dir_content = readdir(curr_dir)) != NULL)
 			if (is_dir_contains_module(curr_dir_str))
 				recursive_file_iteration(&curr_dir_str[0], log_file, 1);
 		 }
-
 		continue;
 	 }
 
@@ -742,9 +727,7 @@ if (modules_to_search)
 			else
 			 {
 				config_sane = 0;
-
 				error_type = ET_MODULES_NOT_FOUND;
-
 				module_no = 0x30 + i;
 
 				strcat(error_line, "! Unknown Error at Module-");
@@ -761,9 +744,7 @@ else	printf("- Modules\t\t:\n\t- All Modules\n");
 if (config_sane == 0)
  {
 	free_dynamic_var();
-
 	printf("%s\n", error_line);
-
  	return (0);
  }
 
