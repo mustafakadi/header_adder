@@ -1,6 +1,6 @@
 # Header Adder
 
-Header Adder is a simple shell application that solves the header dependency issues in C source files. In complex systems that are developed with C, when a new header dependency is added to another C header file, it is pain to add that header file to those all C source files that includes the dependant header file one by one. Header Adder simply adds the given headers to all of the C source files that include the dependant header.
+Header Adder is a simple shell application that solves the header dependency issues in C source files. In complex systems that are developed with C, when a new header dependency is added to another C header file, it is pain to add that header file to those all C source files that includes the dependant header file one by one. Header Adder simply adds the given headers to all of the C source files that include the dependant header in the given directories.
 
 ### Essential Components :
 ### ----------------------
@@ -42,7 +42,7 @@ Header Adder is a simple shell application that solves the header dependency iss
 	- Essential
 	- The string is given in that line will be used as the initial directory to begin searching from
 	- Example:
-		- "Directory::/users/u3/vobs/ddx6/ddx6"
+		- "Directory::/dir1/dir2/dir3/dir4/dir5"
 	
 - "Modules::"
 	- Optional
@@ -53,9 +53,10 @@ Header Adder is a simple shell application that solves the header dependency iss
 	- Not mandatory but to be more effective in terms of searching, it would be better if the module names begin with a slash '/'
 	- Examples:
 		- "Module::"
-		- "Module::/cp"
-		- "Module::/cp/cp_app"
-		- "Module::/mh,/com,/pp_msnz"
+		- "Module::m1"
+		- "Module::/m1"
+		- "Module::/m1/m2"
+		- "Module::/m1,/m2,/m3"
 		
 - "Log::"
 	- Optional
