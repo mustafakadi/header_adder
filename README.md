@@ -1,5 +1,7 @@
 # Header Adder
 
+Header Adder is a simple shell application that solves the header dependency issues in C source files. In complex systems that are developed with C, when a new header dependency is added to another C header file, it is pain to add that header file to those all C source files that includes the dependant header file one by one. Header Adder simply adds the given headers to all of the C source files that include the dependant header.
+
 ### Essential Components :
 ### ----------------------
 - These components are needed to compile and run the code
