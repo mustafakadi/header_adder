@@ -1,5 +1,5 @@
-Search::#include "virtual_button_ram.h"
-Add::#include "naval_systems_limits.h"
-Directory::/users/u3/vobs/ddx6/ddx6
-Modules::/cp,pp
+Search::#include "header_to_be_searched.h"
+Add::#include "header_to_be_added.h"
+Directory::/dir1/dir2/dir3/dir4/dir5
+Modules::/m1,m2
 Log::0
