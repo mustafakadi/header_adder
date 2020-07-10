@@ -1,27 +1,29 @@
-Essential Components :
-----------------------
+# Header Adder
+
+### Essential Components :
+### ----------------------
 - These components are needed to compile and run the code
 	- header_adder.c
 	- iteration_config.txt
 	- makefile
 
-How to Compile?
----------------
+### How to Compile?
+### ---------------
 - If the executable out file, which is named as "headadder", is not present and the source file "header_adder.c" and the makefile "makefile" are present, then it can be compiled as:
 	- Executing "make" command from a terminal or shell on the path of the makefile and source file
 - Compiling creates an executable out file named as "headadder"
 - Once the executable out file is created, it does not have to be compiled again, fields inside the "iteration_config.txt" can be updated as desired
 
-How to Run?
------------
+### How to Run?
+### -----------
 - There are two ways:
 	- 1st: The created executable out file can be called by executing the command "./headadder" from the terminal or the shell, while the shell execution path is on the directory of the out file
 	- 2nd: The created executable out file can be directly called by double clicking on the executable file
 - After running the executable out file, the configurations will be printed on the screen to receive the approval of the user to proceed further
 - The necessary configurations are gathered from the "iteration_config.txt"
 
-Content of "iteration_config.txt" :
------------------------------------
+### Content of "iteration_config.txt" :
+### -----------------------------------
 - "Search::"
 	- Essential
 	- The string is given in that line will be used as the search agent in the files
